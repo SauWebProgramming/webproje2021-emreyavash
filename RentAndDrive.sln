@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentAndDrive", "RentAndDrive\RentAndDrive.csproj", "{C7215251-2726-4483-90AC-94E1A3ADA7DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7215251-2726-4483-90AC-94E1A3ADA7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7215251-2726-4483-90AC-94E1A3ADA7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7215251-2726-4483-90AC-94E1A3ADA7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7215251-2726-4483-90AC-94E1A3ADA7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65A46808-0E29-4351-8952-7582FC7DDF6E}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+@*<div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+        <a href="#">Giriş Yap</a>
+        <a href="#">K</a>
+
+    </div>
+</div>*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/layout.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!--Header-->
+    <div class="headerContainer">
+        <div class="navbar">
+            <div class="brand">
+                <a href="/Home/Index/" class="brandName">Kirala <span class="middleBrand">Ve</span> Sür</a>
+            </div>
+            <div class="menuContainer">              
+                <a class="menuText" href="/Home/Index/">Anasayfa</a>
+                <a class="menuText" href="#">Araçlar</a>
+                <a class="menuText" href="#">İletişim</a>         
+            </div>
+            <div class="loginContainer">
+                <a class="loginText" href="#">Giriş Yap</a>
+                <a class="loginText" href="#">Kayıt Ol</a>
+            </div>
+        </div>
+    </div>
+     <!--Header-->
+    @RenderBody()
+</body>
+</html>
