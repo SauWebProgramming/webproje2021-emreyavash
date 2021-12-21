@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using RentAndDrive.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +9,19 @@ namespace RentAndDrive.Controllers
 {
     public class HomeController : Controller
     {
+        
+        [HttpGet]
         public IActionResult Index()
         {
+            var today = DateTime.Now.ToString("yyyy-MM-dd");
+            ViewBag.tdy = today;
+            return View();
+        }
+      
+        public IActionResult Cars(int id)
+        {
+            ViewBag.cId = id;
+            
             return View();
         }
     }

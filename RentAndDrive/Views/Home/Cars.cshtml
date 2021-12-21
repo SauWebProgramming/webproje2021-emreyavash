@@ -1,0 +1,9 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Kiralık Arabalar";
+}
+
+
+@await Component.InvokeAsync("CarListByCategory",new {id=ViewBag.cId})
+

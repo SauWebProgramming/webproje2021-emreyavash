@@ -1,0 +1,12 @@
+﻿@model IEnumerable<RentAndDrive.Models.Category>
+
+@*category Component*@
+
+<ul class="categoryListContainer">
+    @foreach (var item in Model)
+    {
+
+    <li class="categoryList"><a class="categoryText" href="/Home/Cars/@item.CategoryId">@item.CategoryName</a></li>
+    }
+
+</ul> 

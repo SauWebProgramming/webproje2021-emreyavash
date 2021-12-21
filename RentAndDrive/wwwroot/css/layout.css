@@ -18,8 +18,13 @@
 }
 a {
     text-decoration: none;
+
 }
-.navbar {
+a:link, a:active, a:visited, a:hover {
+        text-decoration: none
+}
+
+.navbara {
     display: inline-flex;
     position: relative;
     height: 70px;
@@ -41,6 +46,13 @@ a {
     font-size: 40px;
     color: #d90429;
 }
+.brandName:link, .brandName:active, .brandName:visited {
+        text-decoration: none;
+}
+.brandName:hover {
+        text-decoration: none;
+        color: #d90429;
+    }
 .middleBrand {
     color: #495057;
 }
@@ -57,6 +69,13 @@ a {
     font-size: 25px;
     color: #495057;
 }
+.menuText:link, .menuText:active, .menuText:visited {
+        text-decoration: none
+}
+.menuText:hover {
+    text-decoration: none;
+    color: #d90429;
+}
 .loginContainer {
     right: 100px;
     position: absolute;
@@ -72,6 +91,14 @@ a {
     font-size: 20px;
     color: #495057;
 }
+.loginText:link, .loginText:active, .loginText:visited {
+    text-decoration: none;
+}
+
+.loginText:hover {
+    text-decoration: none;
+    color: #d90429;
+}
 .mainContainer {
     margin: 0;
     padding: 0;
@@ -85,7 +112,7 @@ a {
     width:100%;
     position:absolute;
     text-align:center;
-    margin-top:20px;
+    margin-top:300px;
     
 }
 .slogan {
@@ -145,25 +172,25 @@ a {
     align-items: center;
     margin-right:20px;
 }
-.btnContainer {
+.btnContainerA {
     margin-top: 20px;
     height: auto;
     width: auto;
 }
-.btn {
-    width: 130px;
-    height: 45px;
+.btnA {
+    width: 180px;
+    height: 60px;
     background-color: #d90429;
     color: #fff;
     font-size: 18px;
     font-family: 'Kameron', serif;
     border-radius: 7px;
 }
-    .btn:hover {
-        background-color: #495057;
-        color: #fff;
+.btnA:hover {
+    background-color: #495057;
+    color: #fff;
 
-    }
+}
 
 
 
@@ -181,11 +208,7 @@ a {
 
 
 /*Dropdown menü*/
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+.dropbtn { 
     border: none;
     cursor: pointer;
 }
@@ -204,14 +227,14 @@ a {
     z-index: 1;
 }
 
-    .dropdown-content a {
+.dropdown-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
     }
 
-        .dropdown-content a:hover {
+.dropdown-content a:hover {
             background-color: #f1f1f1
         }
 
@@ -219,7 +242,4 @@ a {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
 /*Dropdown menü*/

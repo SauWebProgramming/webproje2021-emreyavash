@@ -1,0 +1,126 @@
+﻿.carPageContainer {
+    width: 100%;
+    height: auto;
+    font-family: 'Kameron', serif;
+    color: #495057;
+    display:flex;
+}
+.carContainer{
+    border:1px solid black;
+    border-radius:3px;
+    width:500px;
+    height:450px;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+    align-content:center;
+    display:inline-block;
+    margin-left:20px;
+    margin-top:20px;
+    position:relative;
+    margin-bottom:20px;
+}
+.carImage{
+    width:auto;
+}
+.ımage{
+    width:300px;
+}
+.cars {
+    display: flex;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 30px;
+    margin-top:10px;
+}
+.carName {
+    color: #495057;
+    font-size:20px;
+    margin-right:15px;
+    font-weight:700;
+    
+}
+.carModel {
+    font-size: 18px;
+    font-weight: 500;
+}
+.btnContainer{
+    right:50px;
+    top:20px;
+    position:absolute;
+}
+.btnC {
+    width: 130px;
+    height: 45px;
+    background-color: #d90429;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Kameron', serif;
+    border-radius: 7px;
+}
+
+.btnC:hover {
+        background-color: #495057;
+        color: #fff;
+}
+
+.box {
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
+}
+.carInfo{
+    border-right:1px solid black;
+    margin-right:50px;
+    padding-right:50px;
+    margin-top:20px;
+}
+.rentInfo {
+    margin-top:-27px;
+    display:inline-block;
+
+}
+.carText {
+    font-size: 20px;
+    font-weight: 500;
+    color: #d90429;
+}
+.list-group> li{
+    text-align:left;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+}
+.categoryContainer{
+    width:200px;
+    height:auto;
+    display:inline-block;
+    margin-top:20px;
+   
+}
+.categoryListContainer {
+    width: 100%;
+}
+.categoryList{
+    list-style-type:none;
+    border-bottom:1px solid gray;
+    padding:10px;
+    width:100%;
+    text-align:right;
+}
+.categoryText {
+    text-decoration: none;
+    color: #d90429;
+}
+.categoryText:link, .categoryText:active, .categoryText:visited {
+        text-decoration: none
+    }
+
+    .categoryText:hover {
+        text-decoration: none;
+        color: #495057;
+    }

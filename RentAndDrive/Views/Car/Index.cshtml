@@ -1,0 +1,17 @@
+﻿@using RentAndDrive.Models
+
+
+
+@{
+    ViewData["Title"] = "Araçlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="carPageContainer">
+    <div class="categoryContainer">
+        @await Component.InvokeAsync("CategoryGetList")
+
+    </div>
+    <div class="container">
+        @await Component.InvokeAsync("CarGetList")
+    </div>
+</div>

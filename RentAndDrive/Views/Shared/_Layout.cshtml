@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 @*<div class="dropdown">
@@ -20,26 +19,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="~/css/cars.css" rel="stylesheet" />
+    <link href="~/css/contact.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
      <!--Header-->
     <div class="headerContainer">
-        <div class="navbar">
+        <div class="navbara">
             <div class="brand">
                 <a href="/Home/Index/" class="brandName">Kirala <span class="middleBrand">Ve</span> Sür</a>
             </div>
-            <div class="menuContainer">              
+            <div class="menuContainer">
                 <a class="menuText" href="/Home/Index/">Anasayfa</a>
-                <a class="menuText" href="#">Araçlar</a>
-                <a class="menuText" href="#">İletişim</a>         
+
+                <a href="/Car/Index/" class="menuText">Araçlar</a>
+
+                <a class="menuText" href="/Contact/Index/">İletişim</a>
             </div>
+            @if (!User.Identity.IsAuthenticated)
+            {
             <div class="loginContainer">
-                <a class="loginText" href="#">Giriş Yap</a>
-                <a class="loginText" href="#">Kayıt Ol</a>
+                <a class="loginText" href="/User/Login/">Giriş Yap</a>
+                <a class="loginText" href="/User/Register/">Kayıt Ol</a>
+                
+
             </div>
+            }
+            else
+            {
+
+            <div class="loginContainer">
+                <span>@TempData["Names"]</span>
+                <a class="loginText" href="/User/Logout/">Çıkış Yap</a>
+
+            </div>
+            }
+
+
+
         </div>
     </div>
      <!--Header-->
+    
     @RenderBody()
 </body>
 </html>
