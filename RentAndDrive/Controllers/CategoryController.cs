@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RentAndDrive.Models;
 using RentAndDrive.Repository;
 using System;
@@ -8,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace RentAndDrive.Controllers
 {
+    [AllowAnonymous]
+
     public class CategoryController : Controller
     {
         CategoryRepository categoryRepository = new CategoryRepository();

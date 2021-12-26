@@ -1,0 +1,47 @@
+﻿
+@model List<RentAndDrive.Models.Car>
+@{
+    ViewData["Title"] = "Admin Panel";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h2>Araç Listesi</h2>
+
+<table class="table table-bordered mt-2">
+    <tr>
+        <th>Id</th>
+        <th>Araba Markası</th>
+        <th>Modeli</th>
+        <th>Fiyatı</th>
+        <th>Yılı</th>
+        <th>Vites</th>
+        <th>Km</th>
+        <th>Yakıt Türü</th>
+        <th>Fotoğraf Url</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+
+    </tr>
+    @foreach (var x in Model)
+
+    {
+        <tr>
+            <td>@x.CarId</td>
+            <td>@x.CarName</td>
+            <td>@x.Model</td>
+            <td>@x.Price</td>
+            <td>@x.Year</td>
+            <td>@x.Vites</td>
+            <td>@x.Km</td>
+            <td>@x.Yakit</td>
+            <td>@x.ImageUrl</td>
+            <td>@x.Category.CategoryName</td>
+            <td><a href="/CarAdminPanel/CarDelete/@x.CarId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/CarAdminPanel/CarGet/@x.CarId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/CarAdminPanel/CarAdd/" class="btn btn-primary">Yeni Araba Ekle</a>

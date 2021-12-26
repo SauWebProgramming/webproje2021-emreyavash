@@ -1,6 +1,8 @@
-﻿@model RentAndDrive.Models.User
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+@model RentAndDrive.Models.User
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Giriş Yap";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,15 +11,15 @@
         <form class="form-group" action="Index" asp-controller="User" method="post" enctype="multipart/form-data">
 
             <label>Email</label>
-            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", type = "email", placeholder = "ornekemail@mail.com" })
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", type = "email", placeholder = "email@mail.com" })
             <br />
-            <label>Şifre</label>
+            <label>@localizer["Password"]</label>
             @Html.TextBoxFor(x => x.Password, new { @class = "form-control", type = "password" })
             <br />
             @ViewBag.mesaj
             <br />
             <div class="btnContactContainer">
-                <button class="btnContact">Giriş Yap</button>
+                <button class="btnContact">@localizer["Login"]</button>
             </div>
         </form>
     </div>

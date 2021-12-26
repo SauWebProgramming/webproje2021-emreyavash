@@ -323,6 +323,14 @@
         "runtime": {
           "RentAndDrive.dll": {}
         },
+        "resources": {
+          "en-US/RentAndDrive.resources.dll": {
+            "locale": "en-US"
+          },
+          "tr-TR/RentAndDrive.resources.dll": {
+            "locale": "tr-TR"
+          }
+        },
         "compile": {
           "RentAndDrive.dll": {}
         }

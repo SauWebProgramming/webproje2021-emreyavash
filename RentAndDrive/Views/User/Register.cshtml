@@ -1,38 +1,40 @@
-﻿@model RentAndDrive.Models.User
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+@model RentAndDrive.Models.User
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Kayıt Ol";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="formContainer">
     <div class="formController">
-        
+
         <form class="form-group" action="Register" asp-controller="User" method="post" enctype="multipart/form-data">
-            <label>Adınız</label>
+            <label>@localizer["Name"]</label>
             @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
             @Html.ValidationMessageFor(x => x.UserName, "", new { @style = "color:red;" })
             <br />
-            <label>Soyadınız</label>
+            <label>@localizer["Surname"]</label>
             @Html.TextBoxFor(x => x.UserSurname, new { @class = "form-control" })
             @Html.ValidationMessageFor(x => x.UserSurname, "", new { @style = "color:red;" })
 
             <br />
 
             <label>Email</label>
-            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", type = "email", placeholder = "ornekemail@mail.com" })
+            @Html.TextBoxFor(x => x.Email, new { @class = "form-control", type = "email", placeholder = "email@mail.com" })
             @Html.ValidationMessageFor(x => x.Email, "", new { @style = "color:red;" })
             <br />
 
-            <label>Doğum Tarihiniz</label>
+            <label>@localizer["BirthDay"]</label>
             @Html.TextBoxFor(x => x.BirthDay, new { @class = "form-control", type = "date", value = "2015-08-09" })
             @Html.ValidationMessageFor(x => x.BirthDay, "", new { @style = "color:red;" })
             <br />
-            <label>Telefon Numaranız</label>
+            <label>@localizer["Phone"]</label>
             @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", placeholder = "531 123 45 67" })
             @Html.ValidationMessageFor(x => x.Phone, "", new { @style = "color:red;" })
 
             <br />
-            <label>Şifre</label>
+            <label>@localizer["Password"]</label>
             @Html.TextBoxFor(x => x.Password, new { @class = "form-control", type = "password" })
             @Html.ValidationMessageFor(x => x.Password, "", new { @style = "color:red;" })
 

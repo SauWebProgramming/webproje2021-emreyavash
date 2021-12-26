@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using RentAndDrive.Models;
 using RentAndDrive.Repository;
 using System;
@@ -12,13 +13,23 @@ using System.Threading.Tasks;
 
 namespace RentAndDrive.Controllers
 {
+    
+    [AllowAnonymous]
+
     public class UserController : Controller
     {
+        //private readonly IStringLocalizer<UserController> _localizer;
+        //public UserController(IStringLocalizer<UserController> localizer)
+        //{
+        //    _localizer = localizer;
+
+        //}
+
         UserRepository userRepository = new UserRepository();
         Context c = new Context();
         public IActionResult Index()
         {
-          
+            
             return View();
         }
         [HttpGet]
@@ -29,9 +40,11 @@ namespace RentAndDrive.Controllers
         [HttpPost]
         public IActionResult Register(User p)
         {
+            
+
             if (!ModelState.IsValid)
             {
-                return View("Register");
+                return View();
             }
             userRepository.TAdd(p);
             return RedirectToAction("Index","Home");

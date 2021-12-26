@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RentAndDrive.Models;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace RentAndDrive.Controllers
 {
+    [AllowAnonymous]
+
     public class HomeController : Controller
     {
         

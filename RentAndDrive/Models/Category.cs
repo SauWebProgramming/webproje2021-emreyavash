@@ -10,6 +10,8 @@ namespace RentAndDrive.Models
     {
         [Key]
         public int CategoryId { get; set; }
+        [Required(ErrorMessage = "Kategori Adını Boş Bırakmayınız.")]
         public string CategoryName { get; set; }
+        public bool Status { get; set; }
     }
 }

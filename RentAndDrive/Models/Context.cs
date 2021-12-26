@@ -16,6 +16,6 @@ namespace RentAndDrive.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<User> Users { get; set; }
-        
+        public DbSet<Admin> Admins { get; set; }
     }
 }

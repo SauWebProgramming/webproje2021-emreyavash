@@ -1,0 +1,22 @@
+﻿@model RentAndDrive.Models.Category
+
+@{
+    ViewData["Title"] = "Kategori Güncelle";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h2>Kategori Güncelle</h2>
+<br />
+@using (Html.BeginForm("CategoryUpdate", "CategoryAdminPanel", FormMethod.Post))
+{
+    @Html.Label("Kategori Id")
+    @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" })
+    <br />
+    @Html.Label("Kategori Adı")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.CategoryName, "", new { @style = "color:red;" })
+    <br />
+  
+    <button class="btn btn-warning">Güncelle</button>
+
+}

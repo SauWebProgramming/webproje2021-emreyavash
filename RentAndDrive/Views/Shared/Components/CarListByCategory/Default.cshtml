@@ -1,57 +1,60 @@
 ﻿@model IEnumerable<RentAndDrive.Models.Car>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
 @{
     ViewData["Title"] = "Arabalar";
 }
-    <div class="carPageContainer">
-        <div class="categoryContainer">
-           
-            @await Component.InvokeAsync("CategoryGetList")
-        </div>
-        <div class="container">
-            <div class="row">
-                @foreach (var item in Model)
-                {
+<div class="carPageContainer">
+    <div class="categoryContainer">
 
-                    <div class="carContainer col">
+        @await Component.InvokeAsync("CategoryGetList")
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
 
-                        <div class="cars">
-                            <p><a href="#" class="carName">@item.CarName</a></p>
-                            <p class="carModel">@item.Model</p>
+                <div class="carContainer col">
 
-                        </div>
-                        <div class="btnContainer">
-                            <button class="btnC">Hemen Kirala</button>
-                        </div>
-                        <div class="carImage">
-                            <img class="ımage" src="@item.ImageUrl" />
-                        </div>
+                    <div class="cars">
+                        <p><a href="#" class="carName">@item.CarName</a></p>
+                        <p class="carModel">@item.Model</p>
 
-                        <div class="box">
-                            <div class="carInfo">
-                                <p class="carText">Araç Özellikleri</p>
-                                <ul class="list-group">
-                                    <li>@item.Year</li>
-                                    <li>@item.Km Km</li>
-                                    <li>@item.Yakit</li>
-                                    <li>@item.Vites</li>
-                                </ul>
-
-                            </div>
-                            <div class="rentInfo">
-                                <p class="carText">Kiralama Koşulları</p>
-                                <ul class="list-group">
-                                    <li>@item.Price ₺ /Günlük</li>
-                                    <li>21 Yaş ve Üzeri </li>
-                                </ul>
-
-                            </div>
-                        </div>
+                    </div>
+                    <div class="btnContainer">
+                        <button class="btnC">@localizer["Button"]</button>
+                    </div>
+                    <div class="carImage">
+                        <img class="ımage" src="@item.ImageUrl" />
                     </div>
 
+                    <div class="box">
+                        <div class="carInfo">
+                            <p class="carText">@localizer["CarInfo"]</p>
+                            <ul class="list-group">
+                                <li>@item.Year</li>
+                                <li>@item.Km Km</li>
+                                <li>@item.Yakit</li>
+                                <li>@item.Vites</li>
+                            </ul>
+
+                        </div>
+                        <div class="rentInfo">
+                            <p class="carText">@localizer["RentCon"]</p>
+                            <ul class="list-group">
+                                <li>@item.Price ₺ / @localizer["Day"]</li>
+                                <li> @localizer["Age"] </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
 
 
-                }
-            </div>
+
+            }
         </div>
     </div>
+</div>
 

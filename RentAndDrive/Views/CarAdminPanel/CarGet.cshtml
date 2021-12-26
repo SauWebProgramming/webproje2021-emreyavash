@@ -1,0 +1,49 @@
+﻿@model RentAndDrive.Models.Car
+@{
+    ViewData["Title"] = "Araç Güncelle";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h1>Araç Güncelleme</h1>
+<br />
+@using (Html.BeginForm("CarUpdate", "CarAdminPanel", FormMethod.Post))
+{
+    @Html.Label("Araba Id")
+    @Html.TextBoxFor(x => x.CarId, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Araba Markası")
+    @Html.TextBoxFor(x => x.CarName, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Modeli")
+    @Html.TextBoxFor(x => x.Model, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Fiyatı")
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Yılı")
+    @Html.TextBoxFor(x => x.Year, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Vites")
+    @Html.TextBoxFor(x => x.Vites, new { @class = "form-control" })
+    <br />
+    @Html.Label("Km")
+    @Html.TextBoxFor(x => x.Km, new { @class = "form-control" })
+    <br />
+    @Html.Label("Yakıt Türü")
+    @Html.TextBoxFor(x => x.Yakit, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fotoğraf Url")
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+    <br />
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.value, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+}

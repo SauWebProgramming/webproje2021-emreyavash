@@ -1,0 +1,46 @@
+﻿@model List<RentAndDrive.Models.User>
+@{
+    ViewData["Title"] = "Kullacılar";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+
+
+<h2>Kullanıcı Listesi</h2>
+
+<table class="table table-bordered mt-2">
+    <tr>
+        <th>Id</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Email</th>
+        <th>Parola</th>
+        <th>Doğum Tarihi</th>
+        <th>Telefon Numarası</th>
+        <th>Rol</th>
+     
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+
+    </tr>
+    @foreach (var x in Model)
+
+    {
+        <tr>
+            <td>@x.UserId</td>
+            <td>@x.UserName</td>
+            <td>@x.UserSurname</td>
+            <td>@x.Email</td>
+            <td>@x.Password</td>
+            <td>@x.BirthDay</td>
+            <td>@x.Phone</td>
+            <td>@x.Role</td>
+       
+            <td><a href="/UserAdminPanel/UserDelete/@x.UserId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/UserAdminPanel/UserGet/@x.UserId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+</table>
+

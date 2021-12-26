@@ -1,0 +1,29 @@
+﻿@model List<RentAndDrive.Models.Contact>
+
+@{
+    ViewData["Title"] = "Mesajlar";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<table class="table table-bordered mt-2">
+    <tr>
+        <th>Id</th>
+        <th>Adı</th>
+        <th>Soyadı</th>
+        <th>Email</th>
+        <th>Mesajı</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.CustomerId</td>
+            <td>@x.Name</td>
+            <td>@x.Surname</td>
+            <td>@x.Email</td>
+            <td>@x.Message</td>
+            <td><a href="/ContactAdminPanel/ContactDelete/@x.CustomerId" class="btn btn-danger">Sil</a></td>
+        </tr>
+    }
+
+</table>

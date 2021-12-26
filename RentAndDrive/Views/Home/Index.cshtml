@@ -1,15 +1,17 @@
-﻿
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer localizer
 @{
     ViewData["Title"] = "Anasayfa";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="mainContainer">
     <div class="sloganContainer">
-        <h2 class="slogan">Aradığın Bütün Araçlar Burada</h2>
+        <h2 class="slogan">@localizer["slogan1"]</h2>
 
-        <h2 class="slogan">Gidebildiğin Yere Kadar Git</h2>
+        <h2 class="slogan">@localizer["slogan2"]</h2>
         <div class="btnContainerA">
-            <button class="btnA" onclick="window.location.href='/Car/Index'">Aracını Bul</button>
+            <button class="btnA" onclick="window.location.href='/Car/Index'">@localizer["Button"]</button>
         </div>
     </div>
     <div class="imageContainer">

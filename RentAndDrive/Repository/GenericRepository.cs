@@ -20,10 +20,25 @@ namespace RentAndDrive.Repository
             c.Set<T>().Add(p);
             c.SaveChanges();
         }
+        public void TDelete(T p)
+        {
+            c.Set<T>().Remove(p);
+            c.SaveChanges();
+        }
+        public void TUpdate(T p)
+        {
+            c.Set<T>().Update(p);
+            c.SaveChanges();
+        }
         public List<T> TList()
         {
             return c.Set<T>().ToList();
         }
+        public List<T> TList(string p)
+        {
+            return c.Set<T>().Include(p).ToList();
+        }
+
         public List<T> List(Expression<Func<T, bool>> filter)
         {
             return c.Set<T>().Where(filter).ToList();
